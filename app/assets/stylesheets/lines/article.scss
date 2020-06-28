@@ -46,6 +46,29 @@
     }
   }
 
+  .article_rows {
+    h1  {
+      font-size: 2.2em;
+      font-weight: 700;
+      line-height: 120%;
+      color: $black;
+      a { color: $black; }
+      a:hover { color:$red; }        
+    }
+    h2 {
+      font-size: 1.3em;
+      font-weight: 400;
+      color: $grey;
+      line-height: 120%;
+    }
+    .author_name {
+      font-family: $MerriweatherSans;
+      font-size: 0.8em;
+      text-transform: uppercase;
+    }
+    margin: 25px 0 25px 0;
+  }
+
   .hero_image {
     text-align: center;
     a, img {
