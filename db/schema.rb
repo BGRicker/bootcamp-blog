@@ -12,7 +12,10 @@
 
 ActiveRecord::Schema.define(version: 2020_06_27_140220) do
 
-  create_table "friendly_id_slugs", force: :cascade do |t|
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "friendly_id_slugs", id: :serial, force: :cascade do |t|
     t.string "slug", null: false
     t.integer "sluggable_id", null: false
     t.string "sluggable_type", limit: 40
@@ -22,7 +25,7 @@ ActiveRecord::Schema.define(version: 2020_06_27_140220) do
     t.index ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
   end
 
-  create_table "lines_articles", force: :cascade do |t|
+  create_table "lines_articles", id: :serial, force: :cascade do |t|
     t.string "title"
     t.string "sub_title"
     t.text "content"
@@ -40,7 +43,7 @@ ActiveRecord::Schema.define(version: 2020_06_27_140220) do
     t.index ["slug"], name: "index_lines_articles_on_slug", unique: true
   end
 
-  create_table "lines_authorables", force: :cascade do |t|
+  create_table "lines_authorables", id: :serial, force: :cascade do |t|
     t.integer "author_id"
     t.integer "article_id"
     t.datetime "created_at", null: false
@@ -49,7 +52,7 @@ ActiveRecord::Schema.define(version: 2020_06_27_140220) do
     t.index ["author_id"], name: "index_lines_authorables_on_author_id"
   end
 
-  create_table "lines_authors", force: :cascade do |t|
+  create_table "lines_authors", id: :serial, force: :cascade do |t|
     t.string "name"
     t.string "email"
     t.datetime "created_at", null: false
@@ -58,7 +61,7 @@ ActiveRecord::Schema.define(version: 2020_06_27_140220) do
     t.string "gplus_profile"
   end
 
-  create_table "lines_pictures", force: :cascade do |t|
+  create_table "lines_pictures", id: :serial, force: :cascade do |t|
     t.string "image"
     t.string "name"
     t.integer "article_id"
@@ -67,7 +70,7 @@ ActiveRecord::Schema.define(version: 2020_06_27_140220) do
     t.index ["article_id"], name: "index_lines_pictures_on_article_id"
   end
 
-  create_table "lines_users", force: :cascade do |t|
+  create_table "lines_users", id: :serial, force: :cascade do |t|
     t.string "email"
     t.string "password_digest"
     t.datetime "created_at", null: false
@@ -76,7 +79,7 @@ ActiveRecord::Schema.define(version: 2020_06_27_140220) do
     t.datetime "reset_sent_at"
   end
 
-  create_table "taggings", force: :cascade do |t|
+  create_table "taggings", id: :serial, force: :cascade do |t|
     t.integer "tag_id"
     t.string "taggable_type"
     t.integer "taggable_id"
@@ -87,7 +90,7 @@ ActiveRecord::Schema.define(version: 2020_06_27_140220) do
     t.index ["tag_id", "taggable_id", "taggable_type", "context", "tagger_id", "tagger_type"], name: "taggings_idx", unique: true
   end
 
-  create_table "tags", force: :cascade do |t|
+  create_table "tags", id: :serial, force: :cascade do |t|
     t.string "name"
     t.integer "taggings_count", default: 0
     t.index ["name"], name: "index_tags_on_name", unique: true
