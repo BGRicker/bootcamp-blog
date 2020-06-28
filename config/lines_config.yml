@@ -6,7 +6,7 @@ logo: ""                                                                        
 blog_name: "Bootcamp Bridge"                                                    # Give your blog a meanungful name.
 title: "A blog for bootcamp graduates looking to get ready to work as a developer"  # Give your blog a meaningful title. This is used for the HTML title attribute
 title_short: "Bootcamp Bridge"                                                  # Place the name of your blog or a short title here
-short_description: "A simple open source blog engine, built with Rails"         # Short description for your blog
+short_description: "A blog for bootcamp gradutes"                               # Short description for your blog
 meta_description: "Bootcamp Bridge - a coding blog for bootcamp graudates"      # meta description tag
 meta_author: "Ben Ricker"                                                       # meta tag for author
 keywords: "Blog, Ruby on Rails, Bootcamp, Coding, Engineering, Rocket Insights"                  # your keywords
