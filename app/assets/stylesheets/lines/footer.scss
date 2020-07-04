@@ -2,16 +2,18 @@
 
 footer, #footer {
   margin-top: 2em;
-  background-color: $black;
-  color: $white;
+  background-color: $fourth;
+  color: $first;
   font-family: $SourceSansPro;
   line-height: 120%;
   .container {
     margin: 1.5em auto;
     max-width: $max-width;
+    background-color: $fourth;
+    border-radius: 5px;
     p {
       padding: 0.4em 13%;
-      a { color: $white; font-weight: 600; }
+      a { color: $third; font-weight: 600; }
       a:hover { color: lighten($red, 10%); text-decoration: underline;  }
     }
   }

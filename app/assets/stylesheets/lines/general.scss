@@ -58,6 +58,10 @@ div.rss { display:none; }
 /*------------------------  HEADER  ----------------------*/
 /*--------------------------------------------------------*/
 
+body {
+  background-color: $second;
+}
+
 #topbar {
   color: #fff;
   font-size: 12px;
@@ -71,20 +75,23 @@ div.rss { display:none; }
 header {
   margin: 0 auto;
   max-width: $max-width;
-  padding: 1.1em 0;
+  padding: 1.1em 1.1em;
   font-family: $SourceSansPro;
-  font-weight: 500;
-  font-size: 1.250em;
+  background-color: $first;
+  font-weight: 700;
+  font-size: 1.450em;
   a {
-    color: #000;
+    color: $fourth;
     &:hover { color: $orange; }
   }
   #logo { float: left; text-transform: uppercase; font-weight: 600; }
-  #lines { float: right; }
+  #lines { float: right;}
 }
 
 .container {
   position: relative;
   max-width: $max-width;
   margin: 0 auto;
+  background-color: $first;
+  border-radius: 0 0 10px 10px;
 }

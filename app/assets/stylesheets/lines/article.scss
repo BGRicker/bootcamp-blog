@@ -6,7 +6,6 @@
   line-height: 1.5em;
   color: $black;
 
-
   h1, h2, h3, h4, h5, h6 {
     font-family: $SourceSansPro;
   }
@@ -14,8 +13,8 @@
   .article_header, .article_teaser, .article_content {
     margin: 0 auto;
 
-    * { margin: 1.1em auto;}
-    & > * { padding: 0 13%; }
+    * { margin: 0.9em auto .5em auto;}
+    & > * { padding: 0 5%; }
     & > blockquote { padding: 0 5%; }
     & > p img {
       max-width: 100%;
@@ -34,15 +33,14 @@
       a:hover { color:$red; }        
     }
     h2 {
-      font-size: 1.5em;
-      font-weight: 400;
-      color: $grey;
+      font-size: 1.2em;
+      font-weight: 600;
+      color: $black;
       line-height: 120%;
     }
     .author_name {
       font-family: $MerriweatherSans;
-      font-size: 0.8em;
-      text-transform: uppercase;
+      font-size: 1.1em;
     }
   }
 
@@ -107,6 +105,7 @@
 
 
   .article_content {
+    margin-top: 1.5em;
     line-height: 1.9em;
 
     a { 
